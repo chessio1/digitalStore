@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="design_fab_size_normal">90dp</dimen>
+    <dimen name="design_fab_size_mini">34dp</dimen>
+
+    <dimen name="viewpager_next_item_visible">45dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">74dp</dimen>
+
+</resources>

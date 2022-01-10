@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/samsung"
+        android:checked="true"
+        android:title="@string/samsung" />
+    <item
+        android:id="@+id/iPhone"
+        android:checked="true"
+        android:title="@string/iphone" />
+    <item
+        android:id="@+id/Huawei"
+        android:checked="true"
+        android:title="@string/huawei" />
+</menu>

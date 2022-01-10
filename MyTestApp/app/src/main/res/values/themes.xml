@@ -1,0 +1,178 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyTestApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/backGrWhite</item>
+        <item name="colorPrimaryVariant">@color/dark</item>
+        <item name="colorOnPrimary">@color/dark</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true</item>"
+        <item name="android:includeFontPadding">false</item>
+
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+
+        <item name="textAppearanceHeadline1">@style/Headline1</item>
+        <item name="textAppearanceHeadline2">@style/Headline2</item>
+        <item name="textAppearanceHeadline3">@style/Headline3</item>
+        <item name="textAppearanceHeadline4">@style/Headline4</item>
+        <item name="textAppearanceHeadline5">@style/Headline5</item>
+        <item name="textAppearanceHeadline6">@style/Headline6</item>
+
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="SpinnerTheme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FabFilterStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlayFilter</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="ThemeOverlayFilter" parent="">
+        <item name="colorOnSecondary">@color/dark</item>
+        <item name="colorSecondary">@color/white</item>
+    </style>
+
+    <style name="FabUnselectedStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlayFabUnselectedOnlyIcon</item>
+    </style>
+
+    <style name="ThemeOverlayFabUnselectedOnlyIcon" parent="">
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/grayJoe</item>
+    </style>
+
+    <style name="FabSelectedStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+
+    <!--FabFavouritestStile-Start-->
+
+    <style name="FabFavouritesStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/FabFavouritesStyleTheme</item>
+    </style>
+
+    <style name="FabFavouritesStyleTheme" parent="">
+        <item name="colorOnSecondary">?attr/colorSecondary</item>
+    </style>
+
+    <!--FabFavouritestStile-End-->
+
+    <style name="Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">35sp</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+
+    <style name="Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+
+    <style name="Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">20sp</item>
+        <item name="lineSpacing">1dp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Headline7" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="Headline6Thin" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAlignment">center</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SpecialSmallOrangeSelected" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="font">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+
+    <style name="SpecialSmallOrangeUnselected" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="font">@font/poppins_regular</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="SmallThin" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:letterSpacing">-0.025</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+
+    <style name="InputTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlayInputEditText</item>
+        <item name="android:textAppearance">@style/MyTextAppearance</item>
+    </style>
+
+    <style name="ThemeOverlayInputEditText">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="textAppearanceLineHeightEnabled">true</item>
+        <item name="colorPrimary">#00222222</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/backGrWhite</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/orange</item>
+    </style>
+
+    <style name="MyTextAppearance" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">300sp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_rectangle_rounded_top_20dp</item>
+    </style>
+
+</resources>

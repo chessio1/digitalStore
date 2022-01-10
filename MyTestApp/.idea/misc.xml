@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/backgound_gradient_for_image.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_button.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_circle.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_dark_round_croners.xml" value="0.21203703703703702" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_dark_round_croners_small.xml" value="0.2222222222222222" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_spinner.xml" value="0.3402777777777778" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_spinner_main.xml" value="0.3314814814814815" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/background_spinner_popup.xml" value="0.3402777777777778" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/button_details_favourites_ripple.xml" value="0.2222222222222222" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/circle_selectable.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/fotter_background.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_arrow_down.xml" value="0.3402777777777778" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_back_arrow.xml" value="0.2300925925925926" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_books.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_circle.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_circle_transparent.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_favourites_filled.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_favourites_selectable.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_favourites_stroke.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_fotter_account.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_fotter_bag.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_fotter_heart.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_health_devices.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_phones.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ic_ssd.xml" value="0.1486111111111111" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/pirce_gray_line.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/prefix_text_color.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/radio_check.xml" value="0.2300925925925926" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/radio_icon.xml" value="0.2300925925925926" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/radio_uncheck.xml" value="0.2300925925925926" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/rectangle.xml" value="0.2300925925925926" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ripple_circle.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ripple_circle_no_background.xml" value="0.16111111111111112" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ripple_circle_no_background_orange.xml" value="0.3402777777777778" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ripple_rounded_rectangle.xml" value="0.3356164383561644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/ripple_rounded_rectangle_10dp.xml" value="0.3356164383561644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/selectable_rectangle_rounded_10dp.xml" value="0.3356164383561644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/selectable_rectangle_rounded_20dp.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/shape_gray_line.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/shape_rectangle_rounded_10dp.xml" value="0.3356164383561644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/shape_rectangle_rounded_20dp.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/shape_rectangle_rounded_5dp.xml" value="0.3356164383561644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/shape_spinner.xml" value="0.3402777777777778" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/drawable/tab_indicator.xml" value="0.2300925925925926" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/dialog_fragment_filter.xml" value="0.33" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/fragment_card.xml" value="0.33" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/fragment_deails.xml" value="2.0" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/fragment_details.xml" value="0.14" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/fragment_details2.xml" value="0.28291316526610644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/fragment_main_screen.xml" value="0.25" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_best_seller.xml" value="0.25" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_carousel_image.xml" value="0.21" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_cart_item.xml" value="0.33" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_detail_image.xml" value="0.18" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_details_bottom.xml" value="0.33" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_device_selection.xml" value="1.0" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/item_fotter_cart.xml" value="0.33" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/layout_fotter.xml" value="0.5" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/motion_layout.xml" value="0.1824074074074074" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/motion_layout_carusel.xml" value="0.1824074074074074" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/page_hot_sales.xml" value="0.33" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/reserved_1.xml" value="0.16" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/search_edit_text.xml" value="0.32592592592592595" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/menu/menu_filter_brand.xml" value="0.14444444444444443" />
+        <entry key="..\:/Users/Sergey/.gradle/caches/transforms-3/09cfb1b1132fb74a34cd00df2f617133/transformed/material-1.4.0/res/drawable/mtrl_tabs_default_indicator.xml" value="0.2300925925925926" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/background_button.xml" value="0.18564814814814815" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/background_dark_round_croners.xml" value="0.18564814814814815" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/dimens.xml" value="0.32922374429223744" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/fotter_background.xml" value="0.3337962962962963" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/ic_circle.xml" value="0.2125" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/ic_search_check_boxes.xml" value="0.18564814814814815" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/ic_sircle_dot.xml" value="0.3337962962962963" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/prefix_text_color.xml" value="0.32922374429223744" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/font/mulish_thin.xml" value="0.23072916666666668" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/font/my_bold.xml" value="0.3415525114155251" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/font/my_test_fonts.xml" value="0.23072916666666668" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/font/roboto_bold.xml" value="0.23072916666666668" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/font/roboto_normal.xml" value="0.23072916666666668" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/font/roboto_thin.xml" value="0.23072916666666668" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/layout/fragment_main_screen.xml" value="0.25" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/layout/item_device_selection.xml" value="0.75" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/layout/layout_fotter.xml" value="0.5" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/layout/page_hot_sales.xml" value="0.33" />
+        <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/layout/search_edit_text.xml" value="0.33" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/drawable/backgound_gradient_for_image.xml" value="0.1925925925925926" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/drawable/background_button.xml" value="0.1925925925925926" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/drawable/background_dark_round_croners.xml" value="0.1925925925925926" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/drawable/ic_favourites_filled.xml" value="0.1925925925925926" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/drawable/pirce_gray_line.xml" value="0.1925925925925926" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/layout/fragment_main_screen.xml" value="0.9" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/layout/item_best_seller.xml" value="0.5" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/layout/item_device_selection.xml" value="0.75" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/layout/layout_fotter.xml" value="0.17824074074074073" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/layout/page_hot_sales.xml" value="0.5" />
+        <entry key="..\:/skillboxJob/MyTestApp/app/src/main/res/layout/search_edit_text.xml" value="0.5524044389642416" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

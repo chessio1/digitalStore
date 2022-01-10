@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/navigation_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_navigation_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Zihuatanejo, Gro"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_down_arrow" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageButton
+            android:id="@+id/filterDialog"
+            style="@style/FabFilterStyle"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_filter"
+            android:background="@drawable/ripple_circle_no_background_orange"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat"
+            app:tint="?attr/colorOnPrimary" />
+
+        <FrameLayout
+            android:id="@+id/selectCategoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/select_category"
+                android:textAppearance="?attr/textAppearanceHeadline3" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/viewAllTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="33dp"
+            android:text="view all"
+            android:textAppearance="@style/Headline6Thin"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@+id/selectCategoryTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/selectCategoryTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deviceSelectRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectCategoryTextView"
+            tools:ignore="RtlSymmetry"
+            tools:listitem="@layout/item_device_selection" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/inputCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/searchCheckBoxes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deviceSelectRecyclerView"
+            app:strokeWidth="0dp">
+
+            <include layout="@layout/search_edit_text" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/searchCheckBoxes"
+            style="@style/FabSelectedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_search_check_boxes"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/inputCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputCardView"
+            app:maxImageSize="15dp" />
+
+        <TextView
+            android:id="@+id/hotSalesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:gravity="top"
+            android:text="@string/hot_sales"
+            android:textAlignment="gravity"
+            android:textAppearance="?attr/textAppearanceHeadline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputCardView" />
+
+        <TextView
+            android:id="@+id/seeMoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="33dp"
+            android:text="@string/see_more"
+            android:textAppearance="@style/Headline6Thin"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@+id/hotSalesTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hotSalesTextView" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/hotSalesViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotSalesTextView" />
+
+
+        <TextView
+            android:id="@+id/bestSellerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:gravity="top"
+            android:text="@string/best_seller"
+            android:textAlignment="gravity"
+            android:textAppearance="?attr/textAppearanceHeadline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotSalesViewPager" />
+
+        <TextView
+            android:id="@+id/seeMoreBestSellerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="33dp"
+            android:text="@string/see_more"
+            android:textAppearance="@style/Headline6Thin"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@+id/bestSellerTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bestSellerTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/bestSellerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="478dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bestSellerTextView"
+            tools:listitem="@layout/item_best_seller" />
+
+
+        <include layout="@layout/layout_fotter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

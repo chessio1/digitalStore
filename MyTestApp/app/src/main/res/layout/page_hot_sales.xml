@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/darkerDark"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="378dp"
+            android:layout_height="182dp">
+
+            <ImageView
+                android:layout_width="490dp"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitEnd"
+                android:id="@+id/pictureImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/test_best_seller" />
+
+            <ImageView
+                android:id="@+id/cardBackgroundGradient"
+                android:layout_width="170dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="80dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/shape_rectangle_gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/isNewLabelImageView"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorSecondary" />
+
+            <TextView
+                android:id="@+id/newTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newLabel"
+                android:textAppearance="@style/Headline7"
+                android:textColor="?attr/colorOnSecondary"
+                app:layout_constraintBottom_toBottomOf="@+id/isNewLabelImageView"
+                app:layout_constraintEnd_toEndOf="@+id/isNewLabelImageView"
+                app:layout_constraintStart_toStartOf="@id/isNewLabelImageView"
+                app:layout_constraintTop_toTopOf="@id/isNewLabelImageView" />
+
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textAppearance="?textAppearanceHeadline3"
+                android:textColor="?attr/colorOnSecondary"
+                app:layout_constraintStart_toStartOf="@+id/isNewLabelImageView"
+                app:layout_constraintTop_toBottomOf="@+id/isNewLabelImageView"
+                tools:text="Iphone 12 s pro" />
+
+            <TextView
+                android:id="@+id/additionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAppearance="@style/SmallThin"
+                android:textColor="?attr/colorOnSecondary"
+                app:layout_constraintStart_toStartOf="@id/isNewLabelImageView"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView"
+                tools:text="Super Mega Rapido" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="26dp"
+                android:backgroundTint="@color/white"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:text="Buy now!"
+                android:textAlignment="center"
+                android:textAppearance="@style/SpecialSmallOrangeSelected"
+                android:textColor="?attr/colorPrimaryVariant"
+                app:layout_constraintStart_toStartOf="@+id/isNewLabelImageView"
+                app:layout_constraintTop_toBottomOf="@+id/additionTextView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
