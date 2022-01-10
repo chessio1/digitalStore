@@ -25,6 +25,8 @@ class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<
     override fun onBindViewHolder(holder: BestSalesViewHolder, position: Int) {
         val binding = holder.binding
         val item = bestSales[position]
+
+        Timber.d("TESTER2 ${item.id}")
         val glide = Glide.with(binding.root)
 
         with(binding) {

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.skillbox.mytestapp.data.models.MainScreen
 import com.skillbox.mytestapp.databinding.PageHotSalesBinding
+import timber.log.Timber
 
 class HotSalesAdapter : RecyclerView.Adapter<HotSalesAdapter.DeviceViewHolder>() {
 
@@ -32,6 +33,7 @@ class HotSalesAdapter : RecyclerView.Adapter<HotSalesAdapter.DeviceViewHolder>()
         }
         binding.titleTextView.text = item.title
         binding.additionTextView.text = item.subtitle
+        Timber.d("TESTER " + item.picture)
         Glide.with(binding.root).load(item.picture).into(binding.pictureImageView)
     }
 

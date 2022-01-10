@@ -8,7 +8,6 @@ class ElectronicsRepositoryImpl(private val api:PhoneApi):ElectronicsRepository 
 
     override suspend fun loadStartScreen():MainScreen {
         val list = api.getMain()
-        Timber.d(list.toString())
         return list.firstOrNull() ?: error("NO SUCH DATA")
     }
 

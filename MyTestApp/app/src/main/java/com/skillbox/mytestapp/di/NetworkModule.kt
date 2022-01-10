@@ -8,6 +8,8 @@ import org.koin.dsl.module
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import timber.log.Timber
+import java.util.concurrent.TimeUnit
 
 val networkModule = module {
 
@@ -19,7 +21,7 @@ val networkModule = module {
             )
             .addNetworkInterceptor (
                 MyNetworkInterceptor()
-                )
+            )
             .build()
     }
 

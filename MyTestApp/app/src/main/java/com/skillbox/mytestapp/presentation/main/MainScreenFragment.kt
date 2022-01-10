@@ -98,7 +98,6 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
                 fotterBindig.countOfCartTextView.isVisible = true
             }
 
-
             hotSalesAdapter.setNewList(it)
             bestSalesAdapter.setNewList(it.best_seller)
         }

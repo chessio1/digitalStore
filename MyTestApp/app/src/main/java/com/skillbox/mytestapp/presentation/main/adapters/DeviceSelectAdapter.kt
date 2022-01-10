@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.skillbox.mytestapp.R
+import com.skillbox.mytestapp.TestApp
 import com.skillbox.mytestapp.databinding.ItemDeviceSelectionBinding
+import timber.log.Timber
 
 class DeviceSelectAdapter : RecyclerView.Adapter<DeviceSelectAdapter.DeviceCelectViewHolder>() {
 
@@ -28,7 +30,7 @@ class DeviceSelectAdapter : RecyclerView.Adapter<DeviceSelectAdapter.DeviceCelec
             "books" -> R.drawable.ic_books
             else -> R.drawable.ic_phones
         }
-
+        Timber.d("TESTER2 $icon")
         Glide.with(binding.root).load(icon).into(binding.deviceButton)
         binding.deviceTextView.text = item
         binding.deviceTextView.isSelected = item == selected
