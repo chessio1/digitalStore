@@ -17,7 +17,8 @@ import timber.log.Timber
 class DetailsRepositoryImpl(private val api: PhoneApi,private val context:Context): DetailsRepository {
 
     override suspend fun loadDetails(itemId: Int): PhoneDetailsItem {
-        return api.getDetails("612a529bd943be7d000794b6")
+        return api.getDetails("61dd5a78d4fd1466000a280a")
+
     }
 
     override suspend fun loadDrawables(imagesUrl:List<String>): List<Drawable> {

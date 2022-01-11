@@ -11,6 +11,7 @@ data class PhoneDetailsItem(
     val capacity: List<String>,
     val color: List<String>,
     val images: List<String>,
+    @Json(name = "isFavorites")
     val is_favorites: Boolean,
     val price: Int,
     val rating: Double,

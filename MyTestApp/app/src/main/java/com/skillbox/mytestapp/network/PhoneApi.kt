@@ -9,13 +9,13 @@ import retrofit2.http.Path
 
 interface PhoneApi {
 
-    @GET("main")
+    @GET("home")
     suspend fun getMain():Array<MainScreen>
 
-    @GET("productdetails/{objectid}")
+    @GET("detail/{objectid}")
     suspend fun getDetails(@Path("objectid") id:String):PhoneDetailsItem
 
-    @GET("mycart")
+    @GET("cart")
     suspend fun loadCart():Array<RemoteCart>
 
 

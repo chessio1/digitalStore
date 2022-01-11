@@ -31,7 +31,7 @@ val networkModule = module {
 
     single <Retrofit>{
         Retrofit.Builder()
-            .baseUrl("https://db2021ecom-edca.restdb.io/rest/")
+            .baseUrl("https://shopapi-0575.restdb.io/rest/")
             .addConverterFactory(get())
             .client(get())
             .build()

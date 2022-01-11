@@ -84,7 +84,7 @@ class CardFragment : Fragment(R.layout.fragment_card) {
                     Timber.d("Hello")
                     if (it == null) return@collect
                     cartAdapter.setNewList(it.basket)
-                    binding.deliveryStatusTextView.text = it.Delivery.replaceFirstChar { it.uppercase() }
+                    binding.deliveryStatusTextView.text = it.delivery.replaceFirstChar { it.uppercase() }
                     binding.totalCountTextView.text =
                         getTotal(it.basket.map { 1 }, it.basket.map { it.price })
                     binding.progress.isVisible = false

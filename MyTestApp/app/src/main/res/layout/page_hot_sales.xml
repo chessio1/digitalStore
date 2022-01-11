@@ -2,6 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,11 +21,11 @@
             android:layout_height="182dp">
 
             <ImageView
+                android:id="@+id/pictureImageView"
                 android:layout_width="490dp"
                 android:layout_height="200dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitEnd"
-                android:id="@+id/pictureImageView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@drawable/test_best_seller" />

@@ -7,7 +7,7 @@ import timber.log.Timber
 class MyNetworkInterceptor() : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request().newBuilder()
-            .addHeader("x-apikey", "2aa8e910f6c4ade81a84c9333ffc7bf6a398e")
+            .addHeader("x-apikey", "61ddae2e95cb716ea5ee48e4")
             .build()
         return chain.proceed(request)
     }
