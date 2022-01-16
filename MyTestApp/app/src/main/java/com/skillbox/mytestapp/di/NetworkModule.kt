@@ -1,15 +1,15 @@
 package com.skillbox.mytestapp.di
 
-import com.skillbox.mytestapp.network.MyNetworkInterceptor
-import com.skillbox.mytestapp.network.PhoneApi
+import com.example.feature_details_screen.domain.DetailsApi
+import com.example.feature_main_screen.data.network.CartApi
+import com.example.feature_main_screen.data.network.HomeApi
+import com.example.core.utils.network.MyNetworkInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Converter
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
-import timber.log.Timber
-import java.util.concurrent.TimeUnit
+import retrofit2.converter.gson.GsonConverterFactory
 
 val networkModule = module {
 
@@ -26,7 +26,7 @@ val networkModule = module {
     }
 
     single <Converter.Factory>{
-        MoshiConverterFactory.create()
+        GsonConverterFactory.create()
     }
 
     single <Retrofit>{
@@ -37,8 +37,16 @@ val networkModule = module {
             .build()
     }
 
-    single <PhoneApi> {
+    single <HomeApi> {
         val retrofit:Retrofit = get()
-        retrofit.create(PhoneApi::class.java)
+        retrofit.create(HomeApi::class.java)
+    }
+    single <CartApi> {
+        val retrofit:Retrofit = get()
+        retrofit.create(CartApi::class.java)
+    }
+    single <DetailsApi> {
+        val retrofit:Retrofit = get()
+        retrofit.create(DetailsApi::class.java)
     }
 }

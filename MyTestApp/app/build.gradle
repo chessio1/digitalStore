@@ -33,13 +33,18 @@ android {
         jvmTarget = '1.8'
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 
 }
 
 dependencies {
+
+    implementation project(":core")
+    implementation project(":feature-main-screen")
+    implementation project(":feature-details-screen")
+    implementation project(":feature-cart-screen")
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -64,6 +69,8 @@ dependencies {
 
     // 22.5 retrofit
     def retrofitVersion = '2.9.0'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"

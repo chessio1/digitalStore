@@ -12,6 +12,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/feature-cart-screen" />
+            <option value="$PROJECT_DIR$/feature-details-screen" />
+            <option value="$PROJECT_DIR$/feature-main-screen" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

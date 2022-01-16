@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_details"
+    app:startDestination="@id/detailsFragment">
+
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.feature_details_screen.presentation.DetailsFragment"
+        android:label="DetailsFragment" >
+
+        <deepLink app:uri="jetnavapp://details/{deviceId}" />
+
+    </fragment>
+</navigation>

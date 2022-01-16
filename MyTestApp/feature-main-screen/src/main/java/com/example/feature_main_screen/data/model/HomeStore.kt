@@ -1,0 +1,15 @@
+package com.example.feature_main_screen.data.model
+
+import com.squareup.moshi.JsonClass
+
+
+@JsonClass(generateAdapter = true)
+data class HomeStore(
+    val id: Int,
+    val is_buy: Boolean,
+    val is_favorites: Boolean?,
+    val is_new: Boolean?,
+    val picture: String,
+    val subtitle: String?,
+    val title: String
+)

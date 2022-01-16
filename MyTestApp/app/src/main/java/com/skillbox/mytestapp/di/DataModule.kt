@@ -1,9 +1,14 @@
 package com.skillbox.mytestapp.di
 
-import com.skillbox.mytestapp.data.*
-import com.skillbox.mytestapp.presentation.card.CartViewModel
-import com.skillbox.mytestapp.presentation.details.DetailsViewModel
-import com.skillbox.mytestapp.presentation.main.MainScreenViewModel
+import com.example.feature_cart_screen.data.CartRepositoryImpl
+import com.example.feature_cart_screen.domain.repository.CartRepository
+import com.example.feature_cart_screen.presentation.CartViewModel
+import com.example.feature_details_screen.domain.DetailsRepository
+import com.example.feature_details_screen.presentation.DetailsViewModel
+import com.example.feature_main_screen.data.ElectronicsRepositoryImpl
+import com.example.feature_main_screen.domain.repository.ElectronicsRepository
+import com.example.feature_main_screen.presentation.MainScreenViewModel
+
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -27,7 +32,7 @@ val dataModule = module {
     }
 
     single<DetailsRepository> {
-        DetailsRepositoryImpl(get(),androidContext())
+        com.example.feature_details_screen.data.DetailsRepositoryImpl(get(), androidContext())
     }
 
     single<CartRepository>{

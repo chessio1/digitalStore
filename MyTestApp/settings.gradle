@@ -8,3 +8,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MyTestApp"
 include ':app'
+include ':feature-main-screen'
+include ':core'
+include ':feature-details-screen'
+include ':feature-cart-screen'
