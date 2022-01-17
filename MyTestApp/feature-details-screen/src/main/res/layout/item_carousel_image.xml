@@ -19,4 +19,5 @@
         android:scaleType="centerCrop"
         android:tag="image"
         tools:src="@tools:sample/avatars" />
+
 </com.google.android.material.card.MaterialCardView>

@@ -33,8 +33,4 @@
         android:textColor="@color/text_select_color"
         android:layout_marginBottom="10dp"
         />
-
-
-
-
 </LinearLayout>

@@ -26,17 +26,18 @@
 
         <ImageView
             android:id="@+id/fotterDot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_sircle_dot"
-            app:tint="?attr/colorOnSecondary" />
+            app:tint="?attr/colorPrimary"
+            android:src="@drawable/ic_circle"
+            />
 
         <TextView
             android:id="@+id/fotterExplorrer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
+            android:layout_marginStart="4dp"
             android:text="@string/explorer"
             android:textAppearance="@style/Headline6"
             android:textColor="?attr/colorOnSecondary" />

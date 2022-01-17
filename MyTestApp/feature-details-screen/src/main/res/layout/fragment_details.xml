@@ -9,16 +9,19 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:layout_marginBottom="-30dp">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/motionLayoutMain"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutDescription="@xml/fragment_details_scene_scroll">
+            android:layout_height="match_parent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -79,13 +82,13 @@
                     android:id="@+id/countOfCartTextView"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/shape_circle"
                     android:backgroundTint="?attr/colorSecondary"
                     android:elevation="4dp"
                     android:padding="0dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="30dp"
-                    android:text="2"
+                    android:text="@string/_2"
                     android:textAlignment="center"
                     android:textColor="?attr/colorOnSecondary"
                     android:textSize="16sp"
@@ -316,7 +319,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="29dp"
-                        android:text="Seect color and capacity"
+                        android:text="@string/seect_color_and_capacity"
                         android:textAppearance="?attr/textAppearanceHeadline6"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -371,7 +374,7 @@
                             android:background="@drawable/selectable_rectangle_rounded_10dp"
                             android:backgroundTint="?attr/colorSecondary"
                             android:button="@null"
-                            android:text="228 Gb"
+                            android:text="@string/_228_gb"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6"
                             android:textColor="@color/text_select_color_on_secondary" />
@@ -384,7 +387,7 @@
                             android:background="@drawable/selectable_rectangle_rounded_10dp"
                             android:backgroundTint="?attr/colorSecondary"
                             android:button="@null"
-                            android:text="HelloG"
+                            android:text="@string/hellog"
                             android:textAlignment="center"
                             android:textColor="@color/text_select_color_on_secondary" />
                     </RadioGroup>
@@ -415,7 +418,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="38dp"
                         android:elevation="20dp"
-                        android:text="$1,500.00"
+                        android:text="@string/_1_500_00"
                         android:textAppearance="?attr/textAppearanceHeadline5"
                         android:textColor="?attr/colorOnSecondary"
                         app:layout_constraintBottom_toBottomOf="@+id/addToCardButton"
