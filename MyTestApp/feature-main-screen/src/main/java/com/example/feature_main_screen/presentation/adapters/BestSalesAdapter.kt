@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.feature_main_screen.R
-import com.example.feature_main_screen.data.model.BestSeller
+import com.example.feature_main_screen.data.model.RemoteBestSeller
 import com.example.feature_main_screen.databinding.ItemBestSellerBinding
 
 class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<BestSalesAdapter.BestSalesViewHolder>() {
 
-    private var bestSales: List<BestSeller> = emptyList()
+    private var bestSales: List<RemoteBestSeller> = emptyList()
     private val favourites: MutableList<Int> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestSalesViewHolder {
@@ -81,7 +81,7 @@ class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<
         return bestSales.size
     }
 
-    fun setNewList(bestSeller: List<BestSeller>) {
+    fun setNewList(bestSeller: List<RemoteBestSeller>) {
         bestSales = bestSeller
         notifyItemRangeInserted(0, bestSeller.size)
     }

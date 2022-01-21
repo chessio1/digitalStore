@@ -6,6 +6,8 @@ import com.example.feature_cart_screen.presentation.CartViewModel
 import com.example.feature_details_screen.domain.DetailsRepository
 import com.example.feature_details_screen.presentation.DetailsViewModel
 import com.example.feature_main_screen.data.ElectronicsRepositoryImpl
+import com.example.feature_main_screen.domain.interactor.MainScreenInteractor
+import com.example.feature_main_screen.domain.interactor.MainScreenInteractorImpl
 import com.example.feature_main_screen.domain.repository.ElectronicsRepository
 import com.example.feature_main_screen.presentation.MainScreenViewModel
 
@@ -16,26 +18,46 @@ import org.koin.dsl.module
 val dataModule = module {
 
     viewModel<MainScreenViewModel> {
-        MainScreenViewModel(repository = get())
+        MainScreenViewModel(
+            repository = get(),
+            interactor = get()
+        )
     }
 
-    viewModel<DetailsViewModel>{
+    viewModel<DetailsViewModel> {
         DetailsViewModel(repository = get())
     }
 
-    viewModel<CartViewModel>{
+    viewModel<CartViewModel> {
         CartViewModel(repository = get())
     }
 
     single<ElectronicsRepository> {
-        ElectronicsRepositoryImpl(get())
+        ElectronicsRepositoryImpl(
+            api = get(),
+            dbDao = get(),
+            context = androidContext()
+        )
     }
 
     single<DetailsRepository> {
-        com.example.feature_details_screen.data.DetailsRepositoryImpl(get(), androidContext())
+        com.example.feature_details_screen.data.DetailsRepositoryImpl(
+            api = get(),
+            context = androidContext(),
+            detailsDao = get()
+        )
     }
 
-    single<CartRepository>{
-        CartRepositoryImpl(get())
+    single<CartRepository> {
+        CartRepositoryImpl(
+            api = get(),
+            cartDao = get()
+        )
+    }
+
+    single<MainScreenInteractor> {
+        MainScreenInteractorImpl(
+            repository = get()
+        )
     }
 }

@@ -1,9 +1,9 @@
 package com.example.feature_details_screen.domain
 
 import android.graphics.drawable.Drawable
-import com.example.feature_details_screen.data.model.PhoneDetailsItem
+import com.example.feature_details_screen.data.model.RemotePhoneDetailsItem
 
 interface DetailsRepository {
-    suspend fun loadDetails(itemId:Int): PhoneDetailsItem
+    suspend fun loadDetails(itemId:String): RemotePhoneDetailsItem
     suspend fun loadDrawables(imagesUrl:List<String>):List<Drawable>
 }

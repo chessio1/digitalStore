@@ -39,7 +39,6 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Timber.d("startLoad")
 
         loadDetailsObserve()
         initViewPager()
@@ -131,7 +130,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     }
 
     private fun loadPhoneDetails() {
-        vm.loadDetails((arguments?.get("deviceId") as String).toInt())
+        vm.loadDetails((arguments?.get("deviceId") as String))
     }
 
     override fun onDestroy() {

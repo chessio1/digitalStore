@@ -5,21 +5,26 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.utils.utils.SingleLiveEvent
-import com.example.feature_main_screen.data.model.MainScreen
+import com.example.feature_main_screen.data.model.RemoteMainScreen
+import com.example.feature_main_screen.domain.interactor.MainScreenInteractor
 import com.example.feature_main_screen.domain.repository.ElectronicsRepository
 import kotlinx.coroutines.launch
 
 
-class MainScreenViewModel(private val repository: ElectronicsRepository) : ViewModel() {
+class MainScreenViewModel(
+    private val repository: ElectronicsRepository,
+    private val interactor:MainScreenInteractor
 
-    private val _remoteMainScreen: SingleLiveEvent<MainScreen> =
+    ) : ViewModel() {
+
+    private val _remoteMainScreen: SingleLiveEvent<RemoteMainScreen> =
         SingleLiveEvent()
-    val remoteMainScreen: LiveData<MainScreen>
+    val remoteMainScreen: LiveData<RemoteMainScreen>
         get() = _remoteMainScreen
 
     fun getMainScreen() {
         viewModelScope.launch {
-            val mainScreen = repository.loadStartScreen()
+            val mainScreen = interactor.getSortedMainScreen()
             _remoteMainScreen.postValue(mainScreen)
         }
     }

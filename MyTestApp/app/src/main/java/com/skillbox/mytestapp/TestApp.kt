@@ -1,6 +1,7 @@
 package com.skillbox.mytestapp
 
 import android.app.Application
+import com.skillbox.mytestapp.di.dataBaseModule
 import com.skillbox.mytestapp.di.dataModule
 import com.skillbox.mytestapp.di.networkModule
 import org.koin.android.ext.koin.androidContext
@@ -16,7 +17,7 @@ class TestApp: Application() {
         startKoin {
             androidLogger(if (BuildConfig.DEBUG) Level.ERROR else Level.NONE)
             androidContext(this@TestApp)
-            modules(listOf(dataModule,networkModule))
+            modules(listOf(dataModule,networkModule,dataBaseModule))
         }
         Timber.plant(Timber.DebugTree())
     }

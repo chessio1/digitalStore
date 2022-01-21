@@ -1,10 +1,16 @@
 package com.example.feature_main_screen.presentation
 
+import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.preference.Preference
 import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -29,6 +35,7 @@ import ru.agladkov.uitls.navigation.NavCommand
 import ru.agladkov.uitls.navigation.NavCommands
 import ru.agladkov.uitls.navigation.navigate
 
+val Context.datastore: DataStore<Preferences> by preferencesDataStore("settings")
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 

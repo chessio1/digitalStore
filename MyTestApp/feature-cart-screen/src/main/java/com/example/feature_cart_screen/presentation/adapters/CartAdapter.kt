@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.feature_cart_screen.data.model.Basket
+import com.example.feature_cart_screen.data.model.RemoteBasket
 import com.example.feature_cart_screen.databinding.ItemCartItemBinding
 
 class CartAdapter(val countChangedCallBack:(count:List<Int>,prices:List<Int>)->Unit) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
-    private var baskets = listOf<Basket>()
+    private var baskets = listOf<RemoteBasket>()
     private val counts = mutableMapOf<Int,Int>()
 
     class CartViewHolder(val binding: ItemCartItemBinding) : RecyclerView.ViewHolder(binding.root)
@@ -71,7 +71,7 @@ class CartAdapter(val countChangedCallBack:(count:List<Int>,prices:List<Int>)->U
         return baskets.size
     }
 
-    fun setNewList(basket: List<Basket>) {
+    fun setNewList(basket: List<RemoteBasket>) {
         baskets = basket.mapIndexed { index, basket ->
             basket.copy(id = index)
         }

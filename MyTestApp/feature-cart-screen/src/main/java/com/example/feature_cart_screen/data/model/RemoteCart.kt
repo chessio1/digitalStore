@@ -6,6 +6,6 @@ import com.squareup.moshi.JsonClass
 data class RemoteCart(
     val delivery: String,
     val _id: String,
-    val basket: List<Basket>,
+    val basket: List<RemoteBasket>,
     val total: Int
 )
