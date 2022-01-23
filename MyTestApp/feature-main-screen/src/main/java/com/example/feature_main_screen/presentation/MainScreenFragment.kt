@@ -1,19 +1,12 @@
 package com.example.feature_main_screen.presentation
 
-import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.preference.Preference
 import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
-import androidx.datastore.core.DataStore
-import androidx.datastore.dataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -34,8 +27,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.agladkov.uitls.navigation.NavCommand
 import ru.agladkov.uitls.navigation.NavCommands
 import ru.agladkov.uitls.navigation.navigate
-
-val Context.datastore: DataStore<Preferences> by preferencesDataStore("settings")
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
@@ -96,7 +87,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
                 .debounce(500)
                 .distinctUntilChanged()
                 .collect {
-                    //ToDo
+                    vm.searchPhones(it)
                 }
         }
 
@@ -133,7 +124,10 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
     }
 
     private fun initData() {
+
         vm.getMainScreen()
+
+        _deviceSelectAdapter = DeviceSelectAdapter()
         _hotSalesAdapter = HotSalesAdapter()
         _bestSalesAdapter = BestSalesAdapter {
             navigate(
@@ -148,7 +142,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
                 )
             )
         }
-        _deviceSelectAdapter = DeviceSelectAdapter()
+
 
         childFragmentManager.setFragmentResultListener(
             "filterOptions",
@@ -185,6 +179,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         super.onDestroy()
         _hotSalesAdapter = null
         _bestSalesAdapter = null
+        _deviceSelectAdapter = null
     }
 
 }

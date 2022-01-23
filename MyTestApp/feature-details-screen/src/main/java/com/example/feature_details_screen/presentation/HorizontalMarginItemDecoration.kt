@@ -8,13 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HorizontalMarginItemDecoration(context: Context,@DimenRes horizontalMarginInDp: Int) : RecyclerView.ItemDecoration() {
 
-    /**
-     * Adds margin to the left and right sides of the RecyclerView item.
-     * Adapted from https://stackoverflow.com/a/27664023/4034572
-     * @param horizontalMarginInDp the margin resource, in dp.
-     */
-
-
         private val horizontalMarginInPx: Int =
             context.resources.getDimension(horizontalMarginInDp).toInt()
 

@@ -19,34 +19,16 @@ class MainActivity : AppCompatActivity(R.layout.activity_main),NavigationProvide
     override fun launch(navCommand: NavCommand) {
         when (val target = navCommand.target) {
             is NavCommands.DeepLink -> openDeepLink(
-                url = target.url,
-                isModal = target.isModal,
-                isSingleTop = target.isSingleTop
+                url = target.url
             )
             is NavCommands.Browser -> openBrowser(url = target.url)
         }
     }
 
-    private fun openDeepLink(url: Uri, isModal: Boolean, isSingleTop: Boolean) {
-        val navOptions = if (isModal) {
+    private fun openDeepLink(url: Uri) {
+        val navOptions =
             NavOptions.Builder()
-//                .setEnterAnim(ru.agladkov.uitls.R.anim.slide_in_up_enter)
-//                .setExitAnim(ru.agladkov.uitls.R.anim.slide_out_up_enter)
-//                .setPopEnterAnim(ru.agladkov.uitls.R.anim.slide_in_up_exit)
-//                .setPopExitAnim(ru.agladkov.uitls.R.anim.slide_out_up_exit)
-//                .setLaunchSingleTop(isSingleTop)
-//                .setPopUpTo(if (isSingleTop) R.id.nav_graph_application else -1, inclusive = isSingleTop)
                 .build()
-        } else {
-            NavOptions.Builder()
-//                .setEnterAnim(ru.agladkov.uitls.R.anim.slide_in_left)
-//                .setExitAnim(ru.agladkov.uitls.R.anim.slide_out_left)
-//                .setPopEnterAnim(ru.agladkov.uitls.R.anim.slide_in_left)
-//                .setPopExitAnim(ru.agladkov.uitls.R.anim.slide_out_right)
-//                .setLaunchSingleTop(isSingleTop)
-//                .setPopUpTo(if (isSingleTop) R.id.nav_graph_application else -1, inclusive = isSingleTop)
-                .build()
-        }
 
         navController.navigate(url, navOptions)
     }

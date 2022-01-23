@@ -8,7 +8,9 @@ import com.example.feature_main_screen.R
 import com.example.feature_main_screen.data.model.RemoteBestSeller
 import com.example.feature_main_screen.databinding.ItemBestSellerBinding
 
-class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<BestSalesAdapter.BestSalesViewHolder>() {
+
+class BestSalesAdapter(val onCartClicked: (id: Int) -> Unit) :
+    RecyclerView.Adapter<BestSalesAdapter.BestSalesViewHolder>() {
 
     private var bestSales: List<RemoteBestSeller> = emptyList()
     private val favourites: MutableList<Int> = mutableListOf()
@@ -45,15 +47,15 @@ class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<
         }
 
         with(glide) {
-            load(item.picture).into(binding.imageView)
+            load(item.picture)
+                .into(binding.imageView)
             load(favouritesIc(item.id)).into(binding.addToFavouritesButton)
         }
 
 
-
     }
 
-    private fun isFavourites(itemId: Int):Boolean{
+    private fun isFavourites(itemId: Int): Boolean {
         return favourites.contains(itemId)
     }
 
@@ -67,7 +69,7 @@ class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<
         }
     }
 
-    private fun toggleFavourites(itemId: Int){
+    private fun toggleFavourites(itemId: Int) {
         if (isFavourites(itemId)) {
             favourites.remove(itemId)
         } else {
@@ -76,14 +78,13 @@ class BestSalesAdapter(val onCartClicked:(id:Int)->Unit) : RecyclerView.Adapter<
     }
 
 
-
     override fun getItemCount(): Int {
         return bestSales.size
     }
 
     fun setNewList(bestSeller: List<RemoteBestSeller>) {
         bestSales = bestSeller
-        notifyItemRangeInserted(0, bestSeller.size)
+        notifyItemRangeInserted(0, bestSeller.size - 1)
     }
 
     class BestSalesViewHolder(val binding: ItemBestSellerBinding) :

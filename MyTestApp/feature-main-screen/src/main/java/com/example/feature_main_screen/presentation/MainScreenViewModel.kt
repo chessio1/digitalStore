@@ -12,9 +12,7 @@ import kotlinx.coroutines.launch
 
 
 class MainScreenViewModel(
-    private val repository: ElectronicsRepository,
     private val interactor:MainScreenInteractor
-
     ) : ViewModel() {
 
     private val _remoteMainScreen: SingleLiveEvent<RemoteMainScreen> =
@@ -30,9 +28,7 @@ class MainScreenViewModel(
     }
 
     fun searchPhones(query: String) {
-        viewModelScope.launch {
-            repository.searchPhones(query)
-        }
+        interactor.getSearchResult()
     }
 
 

@@ -23,4 +23,8 @@ class MainScreenInteractorImpl(private val repository: ElectronicsRepository) :
         )
     }
 
+    override fun getSearchResult() {
+        //TODO("Not yet implemented")
+    }
+
 }

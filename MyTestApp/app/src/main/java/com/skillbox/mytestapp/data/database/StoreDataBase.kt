@@ -8,13 +8,13 @@ import com.example.feature_cart_screen.data.model.Cart
 import com.example.feature_details_screen.data.dao.DetailsDao
 import com.example.feature_details_screen.data.model.RemotePhoneDetailsItem
 import com.example.feature_main_screen.data.dao.MainScreenDao
-import com.example.feature_main_screen.data.model.bestSeller.BestSeller
-import com.example.feature_main_screen.data.model.homeStore.HomeStore
+import com.example.feature_main_screen.data.model.RemoteBestSeller
+import com.example.feature_main_screen.data.model.RemoteHomeStore
 
 @Database(
     entities = [
-        BestSeller::class,
-        HomeStore::class,
+        RemoteBestSeller::class,
+        RemoteHomeStore::class,
         RemotePhoneDetailsItem::class,
         Cart::class,
         Basket::class

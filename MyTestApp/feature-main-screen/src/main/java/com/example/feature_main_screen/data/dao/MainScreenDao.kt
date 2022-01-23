@@ -2,50 +2,37 @@ package com.example.feature_main_screen.data.dao
 
 import androidx.room.*
 import com.example.feature_main_screen.data.model.RemoteBestSeller
+import com.example.feature_main_screen.data.model.RemoteHomeStore
 import com.example.feature_main_screen.data.model.RemoteMainScreen
-import com.example.feature_main_screen.data.model.bestSeller.BestSeller
-import com.example.feature_main_screen.data.model.bestSeller.BestSellerContracts
-import com.example.feature_main_screen.data.model.homeStore.HomeStore
-import com.example.feature_main_screen.data.model.homeStore.HomeStoreContracts
+import com.example.feature_main_screen.data.model.bestSeller.RemoteBestSellerContracts
+import com.example.feature_main_screen.data.model.homeStore.RemoteHomeStoreContracts
 
 @Dao
 interface MainScreenDao {
 
     @Transaction
-    suspend fun insertMainScreenFields(homeStores: List<HomeStore>, bestSellers: List<BestSeller>) {
-        deleteAllHomeStores()
-        deleteAllBestSellers()
-        addHomeStores(homeStores)
-        addBestSellers(bestSellers)
+    suspend fun insertMainScreenFields(remoteMainScreen: RemoteMainScreen) {
+        addHomeStores(remoteMainScreen.home_store)
+        addBestSellers(remoteMainScreen.best_seller)
     }
 
-    @Query("DELETE FROM ${HomeStoreContracts.TABLE_NAME}")
-    suspend fun deleteAllHomeStores()
-
-    @Query("DELETE FROM ${BestSellerContracts.TABLE_NAME}")
-    suspend fun deleteAllBestSellers()
+    @Insert
+    suspend fun addHomeStores(homeStores: List<RemoteHomeStore>)
 
     @Insert
-    suspend fun addHomeStores(homeStores: List<HomeStore>)
+    suspend fun addBestSellers(bestSellers: List<RemoteBestSeller>)
 
-    @Insert
-    suspend fun addBestSellers(bestSellers: List<BestSeller>)
+    @Query("SELECT * FROM ${RemoteBestSellerContracts.TABLE_NAME}")
+    suspend fun getBestSellers(): List<RemoteBestSeller>
 
-    @Query("SELECT * FROM ${BestSellerContracts.TABLE_NAME} WHERE ${BestSellerContracts.Columns.MAIN_SCREEN_ID} = :id")
-    suspend fun getBestSellers(id: String): List<BestSeller>
-
-    @Query("SELECT * FROM ${HomeStoreContracts.TABLE_NAME} WHERE ${HomeStoreContracts.Columns.MAIN_SCREEN_ID} = :id")
-    suspend fun getHomeStores(id: String): List<HomeStore>
+    @Query("SELECT * FROM ${RemoteHomeStoreContracts.TABLE_NAME}")
+    suspend fun getHomeStores(): List<RemoteHomeStore>
 
     @Transaction
-    suspend fun getMainScreen(mainScreenId: String): RemoteMainScreen {
-        val bestSeller = getBestSellers(mainScreenId)
-        val homeStores = getHomeStores(mainScreenId)
-        val remoteBestSellers = bestSeller.map {bestSeller->
-            bestSeller.convertToRemote()}.toList()
-        val remoteHomeStores = homeStores.map {homeStore ->
-            homeStore.toRemoteHomeStore()
-        }.toList()
-        return RemoteMainScreen(mainScreenId.toString(), remoteBestSellers, remoteHomeStores)
+    suspend fun getMainScreen(): RemoteMainScreen? {
+        val bestSeller = getBestSellers()
+        if (bestSeller.isEmpty()) return null
+        val homeStores = getHomeStores()
+        return RemoteMainScreen("1", bestSeller, homeStores)
     }
 }

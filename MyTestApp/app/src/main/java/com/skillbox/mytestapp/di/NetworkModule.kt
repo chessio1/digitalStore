@@ -2,7 +2,7 @@ package com.skillbox.mytestapp.di
 
 import com.example.feature_details_screen.domain.DetailsApi
 import com.example.feature_main_screen.data.network.CartApi
-import com.example.feature_main_screen.data.network.HomeApi
+import com.example.feature_main_screen.data.network.MainScreenApi
 import com.example.core.utils.network.MyNetworkInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -37,9 +37,9 @@ val networkModule = module {
             .build()
     }
 
-    single <HomeApi> {
+    single <MainScreenApi> {
         val retrofit:Retrofit = get()
-        retrofit.create(HomeApi::class.java)
+        retrofit.create(MainScreenApi::class.java)
     }
     single <CartApi> {
         val retrofit:Retrofit = get()
