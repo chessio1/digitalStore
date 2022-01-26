@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat"
+            android:id="@+id/mapSelectLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -54,9 +54,9 @@
             android:background="@drawable/ripple_circle_no_background_orange"
             app:borderWidth="0dp"
             app:elevation="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat"
+            app:layout_constraintBottom_toBottomOf="@+id/mapSelectLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat"
+            app:layout_constraintTop_toTopOf="@+id/mapSelectLayout"
             app:tint="?attr/colorOnPrimary" />
 
         <FrameLayout
@@ -66,7 +66,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+            app:layout_constraintTop_toBottomOf="@+id/mapSelectLayout">
 
             <TextView
                 android:layout_width="wrap_content"

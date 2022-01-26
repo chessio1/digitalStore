@@ -73,17 +73,20 @@
         <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/layout/search_edit_text.xml" value="0.32592592592592595" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/app/src/main/res/menu/menu_filter_brand.xml" value="0.14444444444444443" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_back_arrow.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.13150684931506848" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_circle.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_favourites_filled.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_favourites_selectable.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_footer_bag.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_fotter_account.xml" value="0.14444444444444443" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_notification_message.xml" value="0.13150684931506848" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_phones.xml" value="0.19166666666666668" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_plus.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_radio.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_search.xml" value="0.20416666666666666" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ic_sircle_dot.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ripple_circle.xml" value="0.3356164383561644" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ripple_circle_no_background.xml" value="0.3310502283105023" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ripple_rounded_rectangle.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/ripple_rounded_rectangle_10dp.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/selectable_rectangle_rounded_10dp.xml" value="0.3356164383561644" />
@@ -94,6 +97,7 @@
         <entry key="..\:/MyWork/TestApps/MyTestApp/core/src/main/res/drawable/shape_rounded_rectangle.xml" value="0.3356164383561644" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-cart-screen/src/main/res/drawable/ic_back_arrow.xml" value="0.19675925925925927" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-cart-screen/src/main/res/drawable/ic_navigation_icon.xml" value="0.19675925925925927" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/feature-cart-screen/src/main/res/drawable/ripple_rounded_rectangle_10dp.xml" value="0.15555555555555556" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-cart-screen/src/main/res/drawable/shape_rectangle_rounded_10dp.xml" value="0.19675925925925927" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-cart-screen/src/main/res/drawable/shape_rectangle_rounded_top_20dp.xml" value="0.19675925925925927" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-cart-screen/src/main/res/drawable/shape_rounded_rectangle.xml" value="0.19675925925925927" />
@@ -145,6 +149,8 @@
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-main-screen/src/main/res/layout/layout_fotter.xml" value="0.62" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-main-screen/src/main/res/layout/page_hot_sales.xml" value="0.5" />
         <entry key="..\:/MyWork/TestApps/MyTestApp/feature-main-screen/src/main/res/layout/search_edit_text.xml" value="0.1699074074074074" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/featureMapScreen/src/main/res/drawable/ic_baseline_my_location_24.xml" value="0.3310502283105023" />
+        <entry key="..\:/MyWork/TestApps/MyTestApp/featureMapScreen/src/main/res/layout/fragment_map.xml" value="0.2831497348021216" />
         <entry key="..\:/Users/Sergey/.gradle/caches/transforms-3/09cfb1b1132fb74a34cd00df2f617133/transformed/material-1.4.0/res/drawable/mtrl_tabs_default_indicator.xml" value="0.2300925925925926" />
         <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/background_button.xml" value="0.18564814814814815" />
         <entry key="..\:/skillbox/MyProjects/MyTestApp/app/src/main/res/drawable/background_dark_round_croners.xml" value="0.18564814814814815" />

@@ -104,7 +104,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
                         navigate(
                             NavCommand(
                                 NavCommands.DeepLink(
-                                    Uri.parse("jetnavapp://cartFragment"),
+                                    Uri.parse("https://mysite.com/cart"),
                                     false,
                                     true
                                 )

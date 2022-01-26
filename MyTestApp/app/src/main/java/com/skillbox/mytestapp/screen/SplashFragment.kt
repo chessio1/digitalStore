@@ -13,14 +13,29 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        checkExtra()
+
+    }
+
+    private fun navigateTo(deepLink:String) {
         navigate(
             NavCommand(
                 NavCommands.DeepLink(
-                    url = Uri.parse("jetnavapp://mainScreen"),
+                    url = Uri.parse(deepLink),
                     isModal = true,
                     isSingleTop = true
                 )
             )
         )
+    }
+
+    private fun checkExtra() {
+        val extraLink = requireActivity().intent.extras?.getString("screen")
+        if (extraLink!=null){
+            navigateTo(extraLink)
+        }else{
+            navigateTo("https://mysite.com/home")
+        }
     }
 }

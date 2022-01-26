@@ -9,7 +9,7 @@
         android:name="com.example.feature_cart_screen.presentation.CardFragment"
         android:label="CardFragment" >
 
-        <deepLink app:uri="jetnavapp://cartFragment"/>
+        <deepLink app:uri="https://mysite.com/cart"/>
 
     </fragment>
 </navigation>

@@ -2,6 +2,7 @@ package com.example.feature_main_screen.presentation
 
 import android.net.Uri
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
@@ -10,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.core.utils.exceptions.NoDataException
 import com.example.core.utils.textChangedFlow
 import com.example.feature_main_screen.R
 import com.example.feature_main_screen.databinding.FragmentMainScreenBinding
@@ -18,15 +20,18 @@ import com.example.feature_main_screen.databinding.SearchEditTextBinding
 import com.example.feature_main_screen.presentation.adapters.BestSalesAdapter
 import com.example.feature_main_screen.presentation.adapters.DeviceSelectAdapter
 import com.example.feature_main_screen.presentation.adapters.HotSalesAdapter
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.agladkov.uitls.navigation.NavCommand
 import ru.agladkov.uitls.navigation.NavCommands
 import ru.agladkov.uitls.navigation.navigate
+import timber.log.Timber
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
@@ -49,7 +54,25 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         initData()
+
+        lifecycleScope.launch {
+            val token = getToken()
+            Timber.d("token $token")
+        }
+
+    }
+
+
+    suspend fun getToken():String?{
+        return suspendCancellableCoroutine<String?> {coroutione->
+            FirebaseMessaging.getInstance().token.addOnSuccessListener {
+                coroutione.resumeWith(Result.success(it))
+            }.addOnFailureListener {
+                coroutione.resumeWith(Result.failure(NoDataException()))
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -103,15 +126,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         }
 
         fotterBindig.fotterCartButton.setOnClickListener {
-            navigate(
-                NavCommand(
-                    NavCommands.DeepLink(
-                        url = Uri.parse("jetnavapp://cartFragment"),
-                        isModal = false,
-                        isSingleTop = true
-                    )
-                )
-            )
+            goToCart()
         }
 
         binding.filterDialog.setOnClickListener {
@@ -120,7 +135,32 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
             }
         }
 
+        binding.mapSelectLayout.setOnClickListener {
+            navigate(
+                NavCommand(
+                    target = NavCommands.DeepLink(
+                        Uri.parse(
+                            "https://mysite.com/map"
+                        ),
+                        false,
+                        true
+                    )
+                )
+            )
+        }
 
+    }
+
+    private fun goToCart() {
+        navigate(
+            NavCommand(
+                NavCommands.DeepLink(
+                    url = Uri.parse("https://mysite.com/cart"),
+                    isModal = false,
+                    isSingleTop = true
+                )
+            )
+        )
     }
 
     private fun initData() {
@@ -134,7 +174,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
                 NavCommand(
                     target = NavCommands.DeepLink(
                         Uri.parse(
-                            "jetnavapp://details/$it"
+                            "https://mysite.com/details/$it"
                         ),
                         false,
                         true

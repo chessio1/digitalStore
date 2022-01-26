@@ -21,6 +21,11 @@ import com.example.feature_main_screen.domain.interactor.MainScreenInteractor
 import com.example.feature_main_screen.domain.interactor.MainScreenInteractorImpl
 import com.example.feature_main_screen.domain.repository.ElectronicsRepository
 import com.example.feature_main_screen.presentation.MainScreenViewModel
+import com.example.featuremapscreen.data.MapRepositoryImpl
+import com.example.featuremapscreen.domain.GetMarkerUseCaseImpl
+import com.example.featuremapscreen.domain.data.MapRepository
+import com.example.featuremapscreen.domain.usecase.GetMarkerUseCase
+import com.example.featuremapscreen.presentation.MapViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -110,5 +115,17 @@ val dataModule = module {
         MainScreenInteractorImpl(
             repository = get()
         )
+    }
+
+    single<MapRepository>{
+        MapRepositoryImpl()
+    }
+
+    single<GetMarkerUseCase>{
+        GetMarkerUseCaseImpl(repository = get())
+    }
+
+    viewModel<MapViewModel> {
+        MapViewModel(getMarkersUseCase = get())
     }
 }

@@ -9,7 +9,7 @@
         android:name="com.example.feature_main_screen.presentation.MainScreenFragment"
         android:label="MainScreenFragment" >
 
-        <deepLink app:uri="jetnavapp://mainScreen" />
+        <deepLink app:uri="https://mysite.com/home" />
 
     </fragment>
 

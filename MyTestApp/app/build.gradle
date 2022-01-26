@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.gms.google-services'
     id 'kotlin-kapt'
     id "androidx.navigation.safeargs.kotlin"
 
@@ -45,6 +46,7 @@ dependencies {
     implementation project(":feature-main-screen")
     implementation project(":feature-details-screen")
     implementation project(":feature-cart-screen")
+    implementation project(":featureMapScreen")
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -145,5 +147,11 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.4')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-inappmessaging-display-ktx'
+    implementation 'com.google.firebase:firebase-messaging'
 
 }

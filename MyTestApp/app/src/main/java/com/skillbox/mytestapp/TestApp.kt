@@ -1,9 +1,12 @@
 package com.skillbox.mytestapp
 
 import android.app.Application
+import androidx.core.app.NotificationManagerCompat
+import androidx.viewbinding.BuildConfig
 import com.skillbox.mytestapp.di.dataBaseModule
 import com.skillbox.mytestapp.di.dataModule
 import com.skillbox.mytestapp.di.networkModule
+import com.example.core.utils.notifications.NotificationChannels
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,6 +23,8 @@ class TestApp: Application() {
             modules(listOf(dataModule,networkModule,dataBaseModule))
         }
         Timber.plant(Timber.DebugTree())
+        NotificationChannels.create(this)
+        NotificationManagerCompat.from(this).cancelAll()
     }
 
 }

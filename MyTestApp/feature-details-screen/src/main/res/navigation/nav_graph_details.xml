@@ -10,7 +10,7 @@
         android:name="com.example.feature_details_screen.presentation.DetailsFragment"
         android:label="DetailsFragment" >
 
-        <deepLink app:uri="jetnavapp://details/{deviceId}" />
+        <deepLink app:uri="https://mysite.com/details/{deviceId}" />
 
     </fragment>
 </navigation>
