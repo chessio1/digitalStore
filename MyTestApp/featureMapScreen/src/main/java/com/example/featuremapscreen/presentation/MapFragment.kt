@@ -14,8 +14,10 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.core.utils.utils.autoCleared
 import com.example.featuremapscreen.R
 import com.example.featuremapscreen.databinding.FragmentMapBinding
+import com.google.android.gms.dynamic.IObjectWrapper
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.*
+import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.coroutines.flow.collect
@@ -83,7 +85,12 @@ class MapFragment : Fragment(R.layout.fragment_map) {
                         maps.getMapAsync {
                             val latLng = LatLng(location.latitude, location.longitude)
                             val cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng,15f)
+                            it.addMarker(MarkerOptions().apply {
+                                position(latLng) })
                             it.animateCamera(cameraUpdate)
+
+
+
                         }
                     } ?: Toast.makeText(
                         requireContext(),

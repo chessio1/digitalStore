@@ -29,7 +29,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBRswWEdSue39Hf0n6Ty0xq3wZ_bG2SIgs" />
+            android:value="KEY" />
         <service android:name="com.skillbox.mytestapp.services.PushNotificartionService"
             android:exported="false"
             >
