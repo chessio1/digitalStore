@@ -396,7 +396,7 @@
                     </RadioGroup>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/addToCardButton"
+                        android:id="@+id/add_to_cart_button"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="29dp"
@@ -424,9 +424,9 @@
                         android:text="@string/_1_500_00"
                         android:textAppearance="?attr/textAppearanceHeadline5"
                         android:textColor="?attr/colorOnSecondary"
-                        app:layout_constraintBottom_toBottomOf="@+id/addToCardButton"
-                        app:layout_constraintEnd_toEndOf="@+id/addToCardButton"
-                        app:layout_constraintTop_toTopOf="@+id/addToCardButton" />
+                        app:layout_constraintBottom_toBottomOf="@+id/add_to_cart_button"
+                        app:layout_constraintEnd_toEndOf="@+id/add_to_cart_button"
+                        app:layout_constraintTop_toTopOf="@+id/add_to_cart_button" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

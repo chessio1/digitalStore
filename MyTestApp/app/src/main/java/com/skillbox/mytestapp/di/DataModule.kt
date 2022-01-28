@@ -22,7 +22,7 @@ import com.example.feature_main_screen.domain.interactor.MainScreenInteractorImp
 import com.example.feature_main_screen.domain.repository.ElectronicsRepository
 import com.example.feature_main_screen.presentation.MainScreenViewModel
 import com.example.featuremapscreen.data.MapRepositoryImpl
-import com.example.featuremapscreen.domain.GetMarkerUseCaseImpl
+import com.example.featuremapscreen.data.GetMarkerUseCaseImpl
 import com.example.featuremapscreen.domain.data.MapRepository
 import com.example.featuremapscreen.domain.usecase.GetMarkerUseCase
 import com.example.featuremapscreen.presentation.MapViewModel
@@ -115,17 +115,5 @@ val dataModule = module {
         MainScreenInteractorImpl(
             repository = get()
         )
-    }
-
-    single<MapRepository>{
-        MapRepositoryImpl()
-    }
-
-    single<GetMarkerUseCase>{
-        GetMarkerUseCaseImpl(repository = get())
-    }
-
-    viewModel<MapViewModel> {
-        MapViewModel(getMarkersUseCase = get())
     }
 }

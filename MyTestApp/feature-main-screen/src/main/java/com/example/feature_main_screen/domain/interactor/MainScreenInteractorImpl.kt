@@ -27,4 +27,8 @@ class MainScreenInteractorImpl(private val repository: ElectronicsRepository) :
         //TODO("Not yet implemented")
     }
 
+    override suspend fun getToken(){
+        repository.getToken()
+    }
+
 }

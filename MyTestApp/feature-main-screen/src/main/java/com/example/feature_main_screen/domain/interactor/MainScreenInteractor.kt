@@ -6,4 +6,5 @@ interface MainScreenInteractor {
     suspend fun getMainScreen(): RemoteMainScreen
     suspend fun getSortedMainScreen(): RemoteMainScreen
     fun getSearchResult()
+    suspend fun getToken()
 }

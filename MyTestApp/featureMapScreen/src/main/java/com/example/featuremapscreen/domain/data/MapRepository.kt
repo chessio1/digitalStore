@@ -4,4 +4,5 @@ import com.google.android.gms.maps.model.LatLng
 
 interface MapRepository {
     fun getMarkers():List<LatLng>
+    suspend fun getMyLastLocation():LatLng?
 }

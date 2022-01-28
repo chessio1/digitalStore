@@ -1,9 +1,11 @@
 package com.example.featuremapscreen.data
 
 import com.example.featuremapscreen.domain.data.MapRepository
+import com.example.featuremapscreen.domain.data.datasources.MyLastLocationSource
+import com.google.android.gms.maps.LocationSource
 import com.google.android.gms.maps.model.LatLng
 
-class MapRepositoryImpl : MapRepository {
+class MapRepositoryImpl(private val myLastLocationSource: MyLastLocationSource) : MapRepository {
     override fun getMarkers(): List<LatLng> {
         return listOf(
             LatLng(15.16281419860561, -12.465649209916593),
@@ -15,5 +17,9 @@ class MapRepositoryImpl : MapRepository {
             LatLng(37.41202145087906, -122.08311103284358),
             LatLng(37.422841994220505, -122.08552937954666)
         )
+    }
+
+    override suspend fun getMyLastLocation(): LatLng? {
+        return myLastLocationSource.getMyLastLocation()
     }
 }

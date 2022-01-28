@@ -1,4 +1,4 @@
-package com.example.featuremapscreen.domain
+package com.example.featuremapscreen.data
 
 import com.example.featuremapscreen.domain.data.MapRepository
 import com.example.featuremapscreen.domain.usecase.GetMarkerUseCase
