@@ -24,4 +24,4 @@ data class RemoteHomeStore(
     val subtitle: String?,
     @ColumnInfo(name = RemoteHomeStoreContracts.Columns.TITLE)
     val title: String
-)
+):ListItem()

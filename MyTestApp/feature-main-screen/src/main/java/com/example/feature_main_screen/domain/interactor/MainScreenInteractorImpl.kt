@@ -1,5 +1,6 @@
 package com.example.feature_main_screen.domain.interactor
 
+import com.example.feature_main_screen.data.model.DeviceSelectionItem
 import com.example.feature_main_screen.data.model.RemoteMainScreen
 import com.example.feature_main_screen.domain.repository.ElectronicsRepository
 
@@ -29,6 +30,10 @@ class MainScreenInteractorImpl(private val repository: ElectronicsRepository) :
 
     override suspend fun getToken(){
         repository.getToken()
+    }
+
+    override fun getDevicesList(): List<DeviceSelectionItem> {
+        return repository.getDeviceList()
     }
 
 }

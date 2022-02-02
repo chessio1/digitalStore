@@ -7,17 +7,17 @@ import com.bumptech.glide.Glide
 import com.example.feature_main_screen.R
 import com.example.feature_main_screen.databinding.ItemDeviceSelectionBinding
 
-class DeviceSelectAdapter : RecyclerView.Adapter<DeviceSelectAdapter.DeviceCelectViewHolder>() {
+class DeviceSelectAdapter : RecyclerView.Adapter<DeviceSelectAdapter.DeviceSelectViewHolder>() {
 
     private val devices = listOf<String>("phones", "desctops", "health", "books", "tools")
     private var selected: String = "phones"
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeviceCelectViewHolder {
-        return DeviceCelectViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeviceSelectViewHolder {
+        return DeviceSelectViewHolder(
             ItemDeviceSelectionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
-    override fun onBindViewHolder(holder: DeviceCelectViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DeviceSelectViewHolder, position: Int) {
 
         val item = devices[position]
         val binding = holder.binding
@@ -46,7 +46,7 @@ class DeviceSelectAdapter : RecyclerView.Adapter<DeviceSelectAdapter.DeviceCelec
         return devices.size
     }
 
-    class DeviceCelectViewHolder(val binding: ItemDeviceSelectionBinding) :
+    class DeviceSelectViewHolder(val binding: ItemDeviceSelectionBinding) :
         RecyclerView.ViewHolder(binding.root)
 
 }

@@ -60,7 +60,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         }
 
         binding.myCardButton.setOnClickListener {
-            navigateToCart()
+            navigate("https://mysite.com/cart")
         }
 
         binding.backButton.setOnClickListener {
@@ -128,17 +128,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         }
     }
 
-    private fun navigateToCart() {
-        navigate(
-            NavCommand(
-                NavCommands.DeepLink(
-                    Uri.parse("https://mysite.com/cart"),
-                    false,
-                    true
-                )
-            )
-        )
-    }
+
 
 //    override fun onDestroy() {
 //        super.onDestroy()

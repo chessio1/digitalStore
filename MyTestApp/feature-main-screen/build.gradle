@@ -140,4 +140,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-inappmessaging-display-ktx'
     implementation 'com.google.firebase:firebase-messaging'
+
+    //Adapter Delegates
+    //implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl:4.3.1'
+    implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:4.3.1'
 }

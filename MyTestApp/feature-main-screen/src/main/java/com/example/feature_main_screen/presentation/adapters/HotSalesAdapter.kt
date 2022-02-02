@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.feature_main_screen.data.model.RemoteMainScreen
-import com.example.feature_main_screen.databinding.PageHotSalesBinding
+import com.example.feature_main_screen.databinding.PageHomeStoreBinding
 
 class HotSalesAdapter : RecyclerView.Adapter<HotSalesAdapter.DeviceViewHolder>() {
 
     private var items: RemoteMainScreen? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeviceViewHolder {
-        val binding = PageHotSalesBinding.inflate(
+        val binding = PageHomeStoreBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return DeviceViewHolder(binding)
@@ -44,7 +44,7 @@ class HotSalesAdapter : RecyclerView.Adapter<HotSalesAdapter.DeviceViewHolder>()
         notifyItemRangeChanged(0, mainScreen.home_store.size)
     }
 
-    class DeviceViewHolder(val binding: PageHotSalesBinding) : RecyclerView.ViewHolder(binding.root)
+    class DeviceViewHolder(val binding: PageHomeStoreBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {
         super.onDetachedFromRecyclerView(recyclerView)

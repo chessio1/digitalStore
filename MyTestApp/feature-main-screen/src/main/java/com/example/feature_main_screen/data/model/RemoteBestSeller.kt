@@ -22,4 +22,4 @@ data class RemoteBestSeller(
     val price_without_discount: Int,
     @ColumnInfo(name = RemoteBestSellerContracts.Columns.TITLE)
     val title: String
-)
+):ListItem()

@@ -11,22 +11,22 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.core.utils.textChangedFlow
+import com.example.core.utils.utils.autoCleared
 import com.example.feature_main_screen.R
+import com.example.feature_main_screen.data.model.DeviceSelectionItem
 import com.example.feature_main_screen.databinding.FragmentMainScreenBinding
 import com.example.feature_main_screen.databinding.LayoutFotterBinding
 import com.example.feature_main_screen.databinding.SearchEditTextBinding
-import com.example.feature_main_screen.presentation.adapters.BestSalesAdapter
-import com.example.feature_main_screen.presentation.adapters.DeviceSelectAdapter
-import com.example.feature_main_screen.presentation.adapters.HotSalesAdapter
+import com.example.feature_main_screen.presentation.adapters.delegateAdapter.MainScreenAdapter
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.agladkov.uitls.navigation.NavCommand
 import ru.agladkov.uitls.navigation.NavCommands
 import ru.agladkov.uitls.navigation.navigate
+import timber.log.Timber
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
@@ -35,32 +35,31 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
     private val searchBinding: SearchEditTextBinding by viewBinding()
     private val fotterBindig: LayoutFotterBinding by viewBinding()
 
-    private var _hotSalesAdapter: HotSalesAdapter? = null
-    private val hotSalesAdapter: HotSalesAdapter
-        get() = _hotSalesAdapter!!
+    private var homeStoreAdapter: MainScreenAdapter by autoCleared()
 
-    private var _bestSalesAdapter: BestSalesAdapter? = null
-    private val bestSalesAdapter: BestSalesAdapter
-        get() = _bestSalesAdapter!!
+    private var bestSalesAdapter: MainScreenAdapter by autoCleared()
 
-    private var _deviceSelectAdapter: DeviceSelectAdapter? = null
-    private val deviceSelectAdapter: DeviceSelectAdapter
-        get() = _deviceSelectAdapter!!
+    private var deviceSelectAdapter: MainScreenAdapter by autoCleared()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initData()
     }
 
+
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initListeners()
+        initAdapters()
         initViewPagers()
+        initListeners()
     }
 
     private fun initViewPagers() {
         binding.hotSalesViewPager.apply {
-            adapter = hotSalesAdapter
+            adapter = homeStoreAdapter
             currentItem = 0
         }
 
@@ -78,6 +77,14 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
             setHasFixedSize(true)
         }
 
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        if (vm.remoteMainScreen.value == null) return
+        homeStoreAdapter.items = vm.remoteMainScreen.value?.home_store ?: emptyList()
+        bestSalesAdapter.items = vm.remoteMainScreen.value?.best_seller ?: emptyList()
+        deviceSelectAdapter.items = vm.devices.value ?: emptyList()
     }
 
     private fun initListeners() {
@@ -98,8 +105,12 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
                 fotterBindig.countOfCartTextView.text = countOfCarts.toString()
                 fotterBindig.countOfCartTextView.isVisible = true
             }
-            hotSalesAdapter.setNewList(it)
-            bestSalesAdapter.setNewList(it.best_seller)
+            homeStoreAdapter.items = it.home_store
+            bestSalesAdapter.items = it.best_seller
+        }
+
+        vm.devices.observe(viewLifecycleOwner){it->
+            deviceSelectAdapter.items = it
         }
 
         fotterBindig.fotterCartButton.setOnClickListener {
@@ -111,32 +122,20 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         }
 
         binding.mapSelectLayout.setOnClickListener {
-            navigateTo("https://mysite.com/map")
+            navigate("https://mysite.com/map")
         }
 
     }
 
     private fun goToCart() {
-        navigateTo("https://mysite.com/cart")
-    }
-
-    private fun navigateTo(deepLink: String) {
-        navigate(
-            NavCommand(
-                NavCommands.DeepLink(
-                    url = Uri.parse(deepLink),
-                    isModal = false,
-                    isSingleTop = true
-                )
-            )
-        )
+        navigate("https://mysite.com/cart")
     }
 
     private fun initData() {
 
         vm.getMainScreen()
+        vm.getDevices()
         vm.getToken()
-        initAdapters()
         initFilterDialogListener()
 
     }
@@ -162,20 +161,10 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
     }
 
     private fun initAdapters() {
-        _deviceSelectAdapter = DeviceSelectAdapter()
-        _hotSalesAdapter = HotSalesAdapter()
-        _bestSalesAdapter = BestSalesAdapter {
-            navigate(
-                NavCommand(
-                    target = NavCommands.DeepLink(
-                        Uri.parse(
-                            "https://mysite.com/details/$it"
-                        ),
-                        false,
-                        true
-                    )
-                )
-            )
+        deviceSelectAdapter = MainScreenAdapter()
+        homeStoreAdapter = MainScreenAdapter()
+        bestSalesAdapter = MainScreenAdapter{
+            navigate("https://mysite.com/details/$it")
         }
     }
 
@@ -185,13 +174,6 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
             toastText,
             Toast.LENGTH_LONG
         ).show()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _hotSalesAdapter = null
-        _bestSalesAdapter = null
-        _deviceSelectAdapter = null
     }
 
 }

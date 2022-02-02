@@ -18,24 +18,12 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     }
 
-    private fun navigateTo(deepLink:String) {
-        navigate(
-            NavCommand(
-                NavCommands.DeepLink(
-                    url = Uri.parse(deepLink),
-                    isModal = true,
-                    isSingleTop = true
-                )
-            )
-        )
-    }
-
     private fun checkExtra() {
         val extraLink = requireActivity().intent.extras?.getString("screen")
         if (extraLink!=null){
-            navigateTo(extraLink)
+            navigate(extraLink)
         }else{
-            navigateTo("https://mysite.com/home")
+            navigate("https://mysite.com/home")
         }
     }
 }
