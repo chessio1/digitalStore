@@ -79,14 +79,6 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
     }
 
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        if (vm.remoteMainScreen.value == null) return
-        homeStoreAdapter.items = vm.remoteMainScreen.value?.home_store ?: emptyList()
-        bestSalesAdapter.items = vm.remoteMainScreen.value?.best_seller ?: emptyList()
-        deviceSelectAdapter.items = vm.devices.value ?: emptyList()
-    }
-
     private fun initListeners() {
         viewLifecycleOwner.lifecycleScope.launchWhenCreated {
             searchBinding.searchEditText.textChangedFlow()

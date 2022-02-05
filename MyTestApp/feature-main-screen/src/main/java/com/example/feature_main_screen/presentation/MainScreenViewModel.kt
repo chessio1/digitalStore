@@ -26,7 +26,7 @@ class MainScreenViewModel(
     val remoteMainScreen: LiveData<RemoteMainScreen>
         get() = _remoteMainScreen
 
-    private val _devices: SingleLiveEvent<List<DeviceSelectionItem>> =  SingleLiveEvent()
+    private val _devices: MutableLiveData<List<DeviceSelectionItem>> =  MutableLiveData()
     val devices: LiveData<List<DeviceSelectionItem>>
         get() = _devices
 

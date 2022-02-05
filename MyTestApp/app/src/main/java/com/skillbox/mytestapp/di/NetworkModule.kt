@@ -9,6 +9,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Converter
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 val networkModule = module {
@@ -33,6 +35,7 @@ val networkModule = module {
         Retrofit.Builder()
             .baseUrl("https://shopapi-0575.restdb.io/rest/")
             .addConverterFactory(get())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(get())
             .build()
     }

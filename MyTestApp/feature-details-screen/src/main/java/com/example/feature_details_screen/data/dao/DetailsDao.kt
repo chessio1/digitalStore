@@ -5,14 +5,17 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.example.feature_details_screen.data.model.RemotePhoneDetailsItem
 import com.example.feature_details_screen.data.model.RemotePhoneDetailsItemContracts
+import io.reactivex.Maybe
+import io.reactivex.Single
+
 
 @Dao
 interface DetailsDao {
 
     @Query("SELECT * FROM ${RemotePhoneDetailsItemContracts.TABLE_NAME} WHERE ${RemotePhoneDetailsItemContracts.Columns.ID} = :detailsId")
-    suspend fun getDetails(detailsId:String):RemotePhoneDetailsItem?
+    fun getDetails(detailsId:String): Single<RemotePhoneDetailsItem>
 
     @Insert
-    suspend fun addDetails(remotePhoneDetailsItem: RemotePhoneDetailsItem)
+    fun addDetails(remotePhoneDetailsItem: RemotePhoneDetailsItem)
 
 }

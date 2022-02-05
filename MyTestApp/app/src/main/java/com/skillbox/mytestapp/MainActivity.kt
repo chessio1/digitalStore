@@ -31,8 +31,4 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), NavigationProvid
         navController.navigate(url, navOptions)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-    }
-
 }

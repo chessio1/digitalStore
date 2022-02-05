@@ -71,7 +71,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             val bundle = Bundle().apply {
                 putString(FirebaseAnalytics.Param.ITEM_ID,arguments?.get("deviceId") as String)
             }
-            firebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_TO_CART,bundle)
+            firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_CART,bundle)
         }
 
     }
@@ -101,9 +101,9 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     }
 
     private fun initDetailsObserver() {
-        viewLifecycleOwner.lifecycleScope.launchWhenCreated {
-            vm.details.collect {
-                if (it == null) return@collect
+
+            vm.details.observe(viewLifecycleOwner) {
+                if (it == null) return@observe
                 imagesAdapter.addImages(it.images)
                 with(binding) {
                     progressBar.isVisible = false
@@ -125,14 +125,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
                     priceTextView.text = priceText
                 }
             }
-        }
+
     }
-
-
-
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        firebaseAnalytics = null
-//    }
 
 }
